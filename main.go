@@ -47,7 +47,7 @@ func superAdd(numbers ...int) int {
 		fmt.Println(idx, number)
 	}
 	for _, n := range numbers {
-		fmt.Println(nß)
+		fmt.Println(n)
 	}
 	for i := 0; i < len(numbers); i++ {
 		fmt.Println(i, i, numbers[i])
@@ -58,4 +58,16 @@ func superAdd(numbers ...int) int {
 
 func main() {
 	superAdd(1, 2, 3, 4, 5, 6)
+
+	a := 2
+	b := a
+	a = 10
+	c := &a
+
+	fmt.Println(a, b)
+	fmt.Println(&a, &b, c)
+	fmt.Println(*c)
+
+	*c = 20
+	fmt.Println()
 }
