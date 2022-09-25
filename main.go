@@ -57,17 +57,16 @@ func superAdd(numbers ...int) int {
 }
 
 func main() {
-	superAdd(1, 2, 3, 4, 5, 6)
+	names := [5]int{1, 2, 3}
+	fmt.Println(names)
 
-	a := 2
-	b := a
-	a = 10
-	c := &a
+	names[3] = 4
+	names[4] = 5
+	fmt.Println(names)
 
-	fmt.Println(a, b)
-	fmt.Println(&a, &b, c)
-	fmt.Println(*c)
+	numbers := []int{2}
+	numbers = append(numbers, 1)
 
-	*c = 20
-	fmt.Println()
+	fmt.Println(numbers)
+
 }
